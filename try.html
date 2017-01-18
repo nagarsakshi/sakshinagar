@@ -1,0 +1,141 @@
+<html>
+<head>
+<style type="text/css">.long-shadow {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 25px;
+  border: none;
+  font: normal 60px/1 "Fredoka One", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 3px 3px 0 #0199d9 , 4px 4px 0 #0199d9 , 5px 5px 0 #0199d9 , 6px 6px 0 #0199d9 , 7px 7px 0 #0199d9 , 8px 8px 0 #0199d9 , 9px 9px 0 #0199d9 , 10px 10px 0 #0199d9 , 11px 11px 0 #0199d9 , 12px 12px 0 #0199d9 , 13px 13px 0 #0199d9 , 14px 14px 0 #0199d9 , 15px 15px 0 #0199d9 , 16px 16px 0 #0199d9 , 17px 17px 0 #0199d9 , 18px 18px 0 #0199d9 , 19px 19px 0 #0199d9 , 20px 20px 0 #0199d9 ;
+}</style>
+<style>
+.enjoy-css {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  border: none;
+  font: normal 80px/1 "Nova Flat", Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.enjoy-css::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 2;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border: none;
+  font: normal 60px/1 "Nova Flat", Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.43) 0, rgba(255,255,255,0.2) 44%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.96) 57%, rgba(255,255,255,1) 100%);
+  background: -moz-linear-gradient(0deg, rgba(255,255,255,0.43) 0, rgba(255,255,255,0.2) 44%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.96) 57%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,0.43) 0, rgba(255,255,255,0.2) 44%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.96) 57%, rgba(255,255,255,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: none;
+  -webkit-transform:  scaleY(-1)  ;
+  transform:  scaleY(-1)  ;
+}
+
+.enjoy-css::after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "reflect";
+  left: 0;
+  border: none;
+  font: normal 80px/0 "Nova Flat", Helvetica, sans-serif;
+  color: rgba(84,84,84,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: none;
+  -webkit-transform:  scaleY(-0.5) translateY(-20%) ;
+  transform:  scaleY(-0.5) translateY(-20%) ;
+  -webkit-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+}</style>
+<style type="text/css">#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 80%;
+    padding: 20px;
+}</style>
+ <script type="text/javascript">
+                            function showSuccessMessage(){
+                                showNotification({
+                                    type : "success",
+                                    message: "This is a sample success notification"
+                                });    
+                            }                                
+                        </script>
+                        <script>window.onload = function () {
+    document.getElementById('button').onclick = function () {
+        document.getElementById('modal').style.display = "none"
+    };
+};</script>
+</head>
+<body><!-- <div class="enjoy-css">reflect</div>
+<link async href="http://fonts.googleapis.com/css?family=Nova%20Flat" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/> -->
+<div class="long-shadow">long     shadow</div>
+<link async href="http://fonts.googleapis.com/css?family=Fredoka%20One" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+
+<div class="container">
+
+
+                        Demo: <div align="center" onload="return showSuccessMessage()"/>
+                       
+                    </li>
+                    <div id="modal">
+    <div class="modalconent">
+         <h1></h1>
+
+        <p>fasfsdfasfsfsdfsdfsdsffsd</p>
+        <button id="button">Close</button>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
