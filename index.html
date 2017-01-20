@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<style type="text/css">
+/* body {
+margin: 0;
+background: #000; 
+} */
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+#polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+}
+/* h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+} */
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+	body {
+  font-family: 'Ubuntu', sans-serif;
+  width:960px;
+  background-color: #ffb3b3;
+}
+/*  .ui-page { 
+   background: #ff944d;
+}  */
+
+p{
+  color:#525252;
+  font-size:12px;
+}
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+	/* Reset */
+	@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+body {
+    font-family: 'Lato', sans-serif;
+    color: #FFF;
+    background-color: #ffb3b3;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin:  1% 0 1% 0;
+}
+._12 {
+    font-size: 1.2em;
+}
+._14 {
+    font-size: 1.4em;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+#name{
+		margin: 10px;
+		 font-family: fredoka One;
+		 color:   #1a75ff;
+		 text-shadow: 1px 1px 1px  #3385ff; 
+		 text-shadow: 2px 2px 2px  #4d94ff;
+		 text-shadow: 3px 3px 3px  #66a3ff;
+		 text-shadow: 4px 4px 4px  #80b3ff;
+		 text-shadow: 5px 5px 5px  #99c2ff;
+		 text-shadow: 6px 6px 6px  #b3d1ff;
+		 font-size: xx-large;
+		 font-weight: bolder;
+		 }
+		 .description{margin: 10px;
+		 font-family: fredoka One;
+		 color:   	 #ff751a;
+		 text-shadow: 1px 1px 1px  #ff8533; 
+		 text-shadow: 2px 2px 2px  #ff944d;
+		 text-shadow: 3px 3px 3px  #ffa366;
+		 text-shadow: 4px 4px 4px   #ffb380;
+		 text-shadow: 5px 5px 5px  #ffc299;
+		 text-shadow: 6px 6px 6px  #ffd1b3;
+		 font-size: large;
+		 font-weight: bold;}</style>
+		 <style type="text/css">
+		 #modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 50%;
+    padding: 20px;
+}
+#button{
+	height: 5%;
+	width: 20%;
+
+	}
+body {
+    overflow:hidden;
+}
+
+	</style>
+	<style type="text/css">
+		.design{font-size: large;font-weight: bold;color: #ff0000;text-shadow: 4px 4px 2px #ff9999}
+		.mail{text-decoration: None;
+			font-size: x-large;}
+		.mail:hover{-webkit-transform:scale(1.5,1.5);
+			text-decoration: none;}
+			#projects
+			{text-align: center;
+				height: 80%;
+				width:60%;
+				margin-top: 40%;
+				margin-left: 20%;
+				margin-bottom:  40%;
+				margin-right: 20%;
+			}
+			.tales{width:100%;}
+			.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+      max-height: 60%;
+  }
+ #navig ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   /*width: 10%;
+    height: 30%
+   */ background-color: #f1f1f1;
+}
+
+#navig li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+#navig li a:hover {
+    background-color: #555;
+    color: white;
+}
+	</style>
+<link rel='stylesheet' href='http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
+      <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="smart_gallery/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <link href="smart_gallery/smart-gallery.css" rel="stylesheet" type="text/css" />
+
+        <script src="smart_gallery/smart-gallery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#smart-gallery').gallery({ stickthumbnails: true, random: true});
+            });
+
+            var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+
+        </script>
+        <script>jQuery(document).ready(function(){
+	jQuery('.skillbar').each(function(){
+		jQuery(this).find('.skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},6000);
+	});
+});</script>
+<script>window.onload = function () {
+    document.getElementById('button').onclick = function () {
+        document.getElementById('modal').style.display = "none"
+    };
+};</script>
+<script type="text/javascript">
+$(document).keydown(function(e)
+ {
+    switch(e.which) { 
+
+        case 37: // left
+           
+        if(window.location.hash==="#contact")
+       		{
+       		window.location="#projects";
+       		}
+
+        
+        else   if(window.location.hash==="#projects")
+       		{
+       			
+       			window.location="#technical-skills";
+       		}
+        else   if(window.location.hash==="#technical-skills")
+       		{
+       			
+       			window.location="#image-slide";
+       		}
+		else   if(window.location.hash==="#image-slide")
+       		{
+       			
+       			window.location="#home";
+       		}
+
+break;
+        case 38: // 
+        if(window.location.hash==="#contact")
+       		{
+       			
+       			window.location="#projects";
+       		}
+
+        else   if(window.location.hash==="#projects")
+       		{
+       			
+       			window.location="#technical-skills";
+       		}
+        else   if(window.location.hash==="#technical-skills")
+       		{
+       			
+       			window.location="#image-slide";
+       		}
+		else   if(window.location.hash==="#image-slide")
+       		{
+       			
+       			window.location="#home";
+       		}
+
+        break;
+
+        case 39: // right
+        if(window.location.hash==="" || window.location.hash==="#home" )
+        
+       		{
+       			
+       			window.location="#image-slide";
+       		}
+       		else if( window.location.hash==="#image-slide" )
+        
+       		{
+       			
+       			window.location="#technical-skills";
+       		}
+       		else if(window.location.hash==="#technical-skills" )
+        
+       		{
+       			
+       			window.location="#projects";
+       		}
+       		else if( window.location.hash==="#projects" )
+        
+       		{
+       			
+       			window.location="#contact";
+       		}
+       		
+        break;
+
+        case 40: // down
+        if(window.location.hash==="" || window.location.hash==="#home" )
+        
+       		{
+       			
+       			window.location="#image-slide";
+       		}
+       		else if( window.location.hash==="#image-slide" )
+        
+       		{
+       			
+       			window.location="#technical-skills";
+       		}
+       		else if(window.location.hash==="#technical-skills" )
+        
+       		{
+       			
+       			window.location="#projects";
+       		}
+       		else if( window.location.hash==="#projects" )
+        
+       		{
+       			
+       			window.location="#contact";
+       		}
+       		
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+</script>
+</head>
+<body>
+
+<div data-role="page"  >
+ <!--  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div> -->
+  <div data-role="main" class="ui-content" id="home">
+  </br></br></br>
+  <div id="modal">
+    <div class="modalconent">
+        
+
+        <p>You can use <strong>Navigation Keys</strong> to go to next or previous page</p>
+        <button id="button" align="right">Close</button>
+    </div>
+</div>
+<div class="col-sm-12" >
+<!-- <div class="col-sm-2" style="display:inline-block; height:100%;" id="navig">
+<ul>
+  <li><a href="#image-slide">Memories</a></li>
+  <li><a href="#technical-skills">Technical Skills</a></li>
+  <li><a href="#projects">About Me</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul></div> -->
+
+  <div align ="center" class="col-sm-12" >
+    
+  	<img src = "IMG-20160509-WA0001(1).jpg" class="img-circle" align = "center" width="30%" height="90%" >
+  	<div align="center" id="name" >SAKSHI NAGAR</div>
+  	<div align="center" class="description" >Software Developer(Web/App)</div>
+  	<div align="center" class="description" >Pursuing M.Tech, <a href="http://www.iips.edu.in/">IIPS</a>, <a href="http://www.dauniv.ac.in/">DAVV</a></div>
+  	</div>
+  	<div class="col-sm-1">	</div>
+  	<div class="col-sm-1">	</div>
+  </div>
+  
+</div>
+  <div data-role="main" class="ui-content" id="image-slide" align="center">
+<div class="description" align  = "center" style="font-size :   40px;">Memories</div>
+  <img src="smart_gallery\images\imageslde.gif" style="margin-top:4%; margin-bottom:10%" >
+   <!-- <div id="smart-gallery">
+                    <a href=".\smart_gallery\images\IMG_20161223_165520.jpg" title="First Image">
+                        <img src=".\smart_gallery\images\IMG_20161223_165520.jpg" /></a> 
+
+                    <a href="smart_gallery/images/IMG_20161223_151700.jpg"
+                       title="Second Image">
+                        <img src="/smart_gallery/images/IMG_20161223_151700.jpeg" /></a> <a href="smart_gallery/images/IMG_20161223_152739.jpeg"
+                                                                         title="Third Image">
+                        <img src="smart_gallery/images/IMG_20161223_152739.jpeg" /></a> <a href="smart_gallery/images/IMG_20161223_152902.jpeg"
+                                                                      title="Fourth Image">
+                        <img src="smart_gallery/images/IMG_20161223_152902.jpeg" /></a> <a href="smart_gallery/images/IMG_20161223_153439.jpeg"
+                                                                      title="Fifth Image">
+                        <img src="smart_gallery/images/IMG_20161223_153439.jpeg" /></a> <a href="smart_gallery/images/IMG_20161223_165553.jpeg"
+                                                                      title="Sixth Image">
+                        <img src="smart_gallery/images/IMG_20161223_165553.jpeg" /></a> <a href="smart_gallery/images/IMG_20161223_165801.jpeg"
+                                                                      title="Seventh Image">
+                        <img src="smart_gallery/images/IMG_20161223_165801.jpeg" /></a> --><!--  <a href="images/cubagallery-img-8.jpg"
+                                                                      title="Eigth Image">
+                        <img src="images/cubagallery-img-8.jpg" /></a> <a href="images/cubagallery-img-9.jpg"
+                                                                      title="Ninth Image">
+                        <img src="images/cubagallery-img-9.jpg" /></a>
+                    <a href="images/cubagallery-img-10.jpg" title="Tenth Image">
+                        <img src="images/cubagallery-img-10.jpg" /></a> <a href="images/cubagallery-img-11.jpg"
+                                                                       title="Eleventh Image">
+                        <img src="images/cubagallery-img-11.jpg" /></a> <a href="images/cubagallery-img-12.jpg"
+                                                                       title="Twelfth Image">
+                        <img src="images/cubagallery-img-12.jpg" /></a> -->
+
+
+
+
+
+                        <!-- <div class="container" height="30%" style="margin:5%;">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" height="60%">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="smart_gallery\images\IMG_20161223_165801.jpg" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_165553.jpg" alt="Chania" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_153439.jpg" alt="Flower" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_152902.jpg" alt="Flower" width="460" height="345">
+      </div>
+       <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_152739.jpg" alt="Flower" width="460" height="345">
+      </div>
+      <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_151700.jpg" alt="Flower" width="460" height="345">
+      </div> 
+      <div class="item">
+        <img src="smart_gallery\images\IMG_20161223_165520.jpg" alt="Flower" width="460" height="345">
+      </div>
+    </div>
+
+   
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+                </div>
+    <p>Click on the link to see the slidefade effect.</p>
+    <a href="#pagetwo" data-transition="slidefade">Slidefde to Page Two</a> 
+  </div> -->
+
+  <br><br><br>
+ <!--  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div> -->
+  <div data-role="main" class="ui-content" id="technical-skills" align = "left">
+  </br></br></br><br><br>
+  <div class="description" align  = "center" style="font-size :   40px;">Technical Skills</div>
+  <br><br><br><br>
+  	<div class="skillbar clearfix " data-percent="80%" align="left">
+	<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+	<div class="skillbar-bar" style="background: #e67e22;"></div>
+	<div class="skill-bar-percent">80%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+	<div class="skillbar-bar" style="background: #3498db;"></div>
+	<div class="skill-bar-percent">75%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="50%">
+	<div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+	<div class="skillbar-bar" style="background: #2c3e50;"></div>
+	<div class="skill-bar-percent">50%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #46465e;"><span>Java</span></div>
+	<div class="skillbar-bar" style="background: #5a68a5;"></div>
+	<div class="skill-bar-percent">70%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #333333;"><span>C</span></div>
+	<div class="skillbar-bar" style="background: #525252;"></div>
+	<div class="skill-bar-percent">75%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="90%">
+	<div class="skillbar-title" style="background: #27ae60;"><span>C++</span></div>
+	<div class="skillbar-bar" style="background: #2ecc71;"></div>
+	<div class="skill-bar-percent">90%</div>
+</div> <!-- End Skill Bar -->
+
+<!-- <div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+	<div class="skillbar-bar" style="background: #4288d0;"></div>
+	<div class="skill-bar-percent">70%</div>
+</div> --> <!-- End Skill Bar -->
+
+<!-- <p><strong>SOURCE :</strong> http://w3lessons.info/2013/06/04/skill-bar-with-jquery-css3/</p>
+  		 -->
+  </div>
+  <br><br><br><br></br></br></br><br><br><br><br><br>
+ <!--  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div> -->
+  <div data-role="main" class="ui-content" id="projects">
+  <div  class="description" align="center" style="font-size: 54px;">About Me</div>
+<br><br>
+
+       <div align="left" class="description">Resume/Curiculum Vitae</div>
+      <div data-role="collapsible">
+        <h3>My Resume</h3>
+        <p><div align="center" height="20%" width="60%"><p style="color: #ffb366; font-size: large;"><b>To read my Resume you can click on the link bellow: <br> <a href="resume.pdf" target="_blank">click me</a></b></p></div>.</p>
+      </div>
+      <div align="left" class="description">Blog</div>
+<div data-role="collapsible">
+        <h3>My Blog</h3>
+        <p><div align="center" height="20%" width="60%"><p style="color: #ffb366; font-size: large;"><b>To read my blog you can click on the link bellow:<br><a href="http://sakshinagariot.blogspot.in/">Blog</a></b></p></div>.</p>
+      </div>
+      <div align="left" class="description">My Projects</div>
+      <div data-role="collapsible">
+        <h3>Online Art Gallery</h3>
+        <p><div align="center" height="20%" width="60%"><p style="color: #ffb366; font-size: large;"><b>The project was based on the idea of buying and selling paintings Online. It was made as the 6th semester Minor Project. The technolgy used was JSP and Front End was done with help of HTML5, CSS3, JavaScript, etc.</b></p></div>.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>My website</h3>
+        <p><div align="center" height="20%" width="60%"><p style="color: #ffb366; font-size: large;"><b>This website consist of my own Personal information. My Skills and Experience. The technolgy used was JSP and Front End was done with help of HTML5, CSS3, JavaScript, etc.</b><br>Link to the site is : <a href=#>MY WEBSITE</a></p></div></p>
+      </div>
+
+  </div>	
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div data-role="main" class="ui-content" id="contact">
+<div align="center" class="design">You can directly Contact Me through</div>
+	<div align="center" class="mail"><a href="mailto:sakshi.archie@gmail.com?Subject=Want to contact%20again" target="_top">Mail</a></div>
+	<div align="center" class="design">You can come to meet me here</div>
+	<br>
+<div align="center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14723.521508986998!2d75.87089504719182!3d22.695496623825704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fce75a8d8f13%3A0x5eb4dcd4300eb445!2sCV+Raman+Girls+Hostel%2C+DAVV!5e0!3m2!1sen!2sin!4v1484768032469" width="50%" height="80%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+<div class = "wrapper">
+<ul class="social-icons icon-circle icon-rotate list-unstyled list-inline"> 
+	      <!-- <li><a href="#"><i class="fa fa-adn"></i></a> </li> 
+	      <li><a href="#"><i class="fa fa-android"></i></a> </li>   
+	      <li> <a href="#"><i class="fa fa-apple"></i></a> </li>
+	      <li> <a href="#"><i class="fa fa-bitbucket"></i></a> </li> 
+	      <li> <a href="#"><i class="fa fa-bitcoin"></i></a> </li> 
+	      <li> <a href="#"><i class="fa fa-css3"></i></a> </li> 
+	      <li> <a href="#"><i class="fa fa-dribbble"></i></a></li> 
+	      <li> <a href="#"><i class="fa fa-dropbox"></i></a></li>  -->
+	      <li> <a href="https://www.facebook.com/sakshi.archie?fref=ts&__mref=message_bubble"><i class="fa fa-facebook"></i></a></li>  
+	     <!--  <li> <a href="#"><i class="fa fa-flickr"></i></a></li> 
+	      <li> <a href="#"><i class="fa fa-foursquare"></i></a></li>   -->
+	      <li> <a href="https://www.linkedin.com/in/sakshi-nagar-623b01136"><i class="fa fa-linkedin"></i></a></li> 
+	      <li> <a href="https://github.com/nagarsakshi/"><i class="fa fa-github"></i></a></li> 
+	      <li> <a href="https://www.youtube.com/channel/UC4xZU_XLVOR-74Cdpo-1CBA"><i class="fa fa-youtube"></i></a></li> 
+	      <li> <a href="https://plus.google.com/110782697948196410281"><i class="fa fa-google-plus"></i></a></li>
+	  	</ul>
+
+</div>
+    <!-- <p>Click on the link to go back. <b>Note</b>: fade is default.</p>
+    <a href="#pageone">Go to Page One</a> -->
+  </div> 
+
+ <!-- <div class="footer-social-icons">
+    <h4 class="_14">Follow us on</h4>
+    <ul class="social-icons">
+        <li><a href="www.facebook.com" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/uas/login" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://plus.google.com" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+    </ul>
+</div> -->
+</body>
+</html>
